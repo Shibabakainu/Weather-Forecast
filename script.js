@@ -1,4 +1,4 @@
-const api_key = "5fe02a461abde750edff53794ea647d1" // openweathermapから受け取ったAPIキー
+const api_key = "INSERT_YOUR_OWN_API_KEY" // openweathermapから受け取ったAPIキー
 
 let weatherCardHtml = document.getElementById('weather-cards');
 let todayCardHtml = document.getElementById('today');
