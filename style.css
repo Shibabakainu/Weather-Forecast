@@ -1,0 +1,251 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    z-index: 9999;
+    overflow: hidden;
+    background-color:steelblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+.navbar a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 30px;
+    transition: 0.5s ease;
+}
+.navbar a:hover {
+    background-color:deepskyblue;
+    color: black;
+}
+.wrap { 
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1px;
+    background-image: url(background/pic2.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 100%;
+}
+
+header {
+    width: auto;
+    height: 300px;
+    margin: 0;
+    padding-top: 0;
+    text-align: center;
+    background-image: url(images/landscape.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+header h1 {
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    padding-top: 100px;
+    margin-top: 20px;
+}
+.input {  
+    width: auto;
+    display: flex;
+    justify-content:center;
+    background-color: lightsteelblue;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+.input input {
+    margin: 20px 0 20px 20px;
+    height: 30px;
+    width: 500px;
+    font-size: 1rem;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.input h2 {
+    padding-top: 0;
+}
+.input button {
+    width: 150px;
+    height: 32px;
+    margin: 20px 0px 0px 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    background-color:steelblue;
+    transition: 0.2s ease;
+}
+.input button:hover {
+    background-color: dodgerblue;
+}
+.forecast {
+    width: auto;
+    padding-left: 50px;
+}
+.forecast .today {
+    color: aliceblue;
+    background-color: rgba(0,0,0,.3);
+    border-radius: 10px;
+    padding: 0 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.today .icon {
+    text-align: center;
+}
+.today .icon img {
+    margin-top: 0;
+    width: 120px;
+}
+.today .details {
+    font-size: 25px;
+}
+.today .details .location {
+    margin-top: 20px;
+    font-size: 50px;
+}
+.today .details .wind {
+    margin-bottom: 30px;
+}
+.icon {
+    margin-right: 30px;
+}
+.icon #img {
+    width: 200px;
+}
+.today .icon .condition {
+    margin: 0 0 20px 0;
+    font-size: 50px;
+    color:cornflowerblue;
+}
+
+.wrap2 {
+    display: flex;
+}
+#map {
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    margin: 0 30px 0 30px;
+}
+.fivedays {
+    padding-bottom: 50px;
+}
+.fivedays ul {
+    list-style-type: none;
+}
+.weather-cards {
+    padding-inline-start: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    color: aliceblue;
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 0 50px 0 50px;
+    margin: 20px 50px 20px 20px;
+    justify-content: space-between;
+    width: 200px;
+}
+.card #img {
+    width: 100px;
+    height: 100px;
+}
+.card h6 {
+    margin: 0;
+}
+footer {
+    z-index: 9999;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color:steelblue;
+    text-align: right;
+}
+footer p {
+    color:white;
+    margin-top: 5px;
+    padding-right: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media screen and (max-width: 1200px) {
+    .forecast .today {
+        width: 500px;
+    }
+    .input button {
+        margin-right: 30px;
+    }
+    .input h2 {
+        margin-left: 30px;
+    }
+    .weather-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .weather-cards .card {
+        flex-wrap: wrap;
+        width: calc(100% / 6);
+        font-size: 30px;
+        padding: 0 25px 0;
+        margin-right: 40px;
+        margin-left: 0;
+    }
+    .card h4 {
+        margin: 20px 0 20px 0;
+        font-size: 30px;
+    }
+    .card h6 {
+        margin: 0 0 20px 0;
+    }
+    .card #img {
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .forecast .today {
+        width: 350px;      
+    }
+    .input h2 {
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    .icon {
+        width: 150px;
+    }
+    .icon #img {
+        width: 180px;
+    }
+    .weather-cards .card {
+        width: calc(25%);
+    }
+    .card {
+        padding: 0 25px 0;
+        margin-right: 40px;
+        margin-left: 0;
+    }
+    .wrap2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #map {
+        margin-left: 0;
+    }
+}

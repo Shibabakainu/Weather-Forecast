@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Travel Weather Forecast</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body onload=randomBG()>
+        <div class="navbar">    
+            <a href="source.html">ソース</a>               
+            <a href="index.html">ホーム</a>
+        </div>      
+        <header id="headimage" >
+            <h1>天気予報</h1>       
+        </header>
+        <div class="input">                   
+            <h2>地名</h2>
+            <input class="search-input" type="text" placeholder="東京、ニューヨーク、ハノイ、...">
+            <button class="search-button" onclick='getResults()'>検索</button>               
+            <button class="user-location" onclick='userLocation()'>現在地</button>
+        </div>             
+        <div class="wrap" id="bodyimage" onload=randomBG()>
+            <div class="forecast">
+                <h3>今日の天気予報</h3>
+                <div class="wrap2">
+                    <div class="today" id="today">
+                        <div class="details">
+                            <div class="location">__</div>
+                            <div class="date">日付</div>
+                            <div class="temp"><i class="fa fa-thermometer-half" aria-hidden="true"style="font-size:30px;"></i> _____℃</div>                       
+                            <div class="humidity"><i class="fa fa-tint" aria-hidden="true" style="font-size:30px;"></i> ______</div>
+                            <div class="hi-low"><i class="fa fa-thermometer-empty" aria-hidden="true"style="font-size:30px;color:blue"></i>℃<br><i class="fa fa-thermometer" style="font-size:30px;color:red"></i>℃</div>
+                            <div class="wind"><iconify-icon icon="wi:strong-wind" width="40"></iconify-icon> _______</div>
+                        </div>
+                        <div class="icon">
+                        <img id="img">
+                            <div class="condition">状況</div>
+                        </div>
+                    </div>
+                    <div id="map"></div>
+                </div>
+                <div class="advice" id="advice">
+                    <h3>アドバイス：</h3>
+                </div>
+                <h3>5日間の天気予報</h3>
+                <div class="fivedays">
+                    <ul class="weather-cards" id="weather-cards">
+                        <li class="card">
+                            <h4>_____</h4>
+                            <h6>温度: ___℃</h6>
+                            <h6>湿度: __%</h6>
+                            <h6>風: ___ m/s</h6> 
+                        </li>
+                        <li class="card">
+                            <h4>_____</h4>
+                            <h6>温度: ___℃</h6>
+                            <h6>湿度: __%</h6>
+                            <h6>風: ___ m/s</h6>
+                        </li>
+                        <li class="card">
+                            <h4>_____</h4>
+                            <h6>温度: ___℃</h6>
+                            <h6>湿度: __%</h6>
+                            <h6>風: ___ m/s</h6>
+                        </li>
+                        <li class="card">
+                            <h4>_____</h4>
+                            <h6>温度: ___℃</h6>
+                            <h6>湿度: __%</h6>
+                            <h6>風: ___ m/s</h6>
+                        </li>
+                        <li class="card">
+                            <h4>_____</h4>
+                            <h6>温度: ___℃</h6>
+                            <h6>湿度: __%</h6>
+                            <h6>風: ___ m/s</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>       
+        </div>
+        <footer>
+            <p><small>グループ　Ⅰ - J09</small></p>
+        </footer> 
+    </body>
+</html>
